@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <script src="http://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    {% comment %} <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> {% endcomment %}
+     <script type="text/javascript"
+       src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script> 
+    <script type="text/x-mathjax-config">
+              MathJax.Hub.Config({
+                  jax: ["input/TeX", "output/HTML-CSS"],
+                  TeX: {
+                      extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js"]
+                  },
+                  "HTML-CSS": {
+                      minScaleAdjust: 100
+                  },
+                  menuSettings: {
+                      context: "MathJax",
+                      zoom: "Hover",
+                      ALT: true
+                  },
+                  MathZoom: {
+                      delay: 100
+                  },
+                  extensions: ["tex2jax.js"]
+              });
+          </script>
+    <title>Index</title>
+  </head>
+<body>
+  <center>
+
+<h2>Assignment 2 (Computing output elasticity)</h2>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] },
+    tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+    TeX: { noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } } },
+    messageStyle: "none"
+  });
+  </script>    
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
+
+<form action="">
+  <div class="form-group col-md-4">
+    <label for="C">Enter C</label>
+    <input type="text" class="form-control" id="c" name="c" value="q**3-10*q**2+17*q+66">
+    <small id="Help" class="form-text text-muted">Enter Value for Cost function here similar format to given above</small>
+  </div>
+  <div class="form-group  col-md-4">
+    <label for="P">Enter P</label>
+    <input type="text" class="form-control" id="p" name="p" value="5">
+    <small id="Helpp" class="form-text text-muted">Enter Value for p here</small>
+
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form> 
+
+{% if ans %}
+</br></br>
+<h2>Answer:</h2>
+
+  <h5>C: ${{c}}$ and P: {{p}}</h5>
+
+  <p> The firm produces at MC=p to maximize profit</p>
+  <p> MC = Marginal Profit, p = price</p>
+  <p> MC = $\frac{dC}{dq}$</p>
+  <p> Equating to p</p>
+
+  <p> Q = {{qq}}</p>
+  <p> Taking the maximum Q</p>
+
+  <p> Output Elasticity formula is : $\frac{C}{q}*\frac{dC}{dq}$</p>
+
+  <p>$(({{c}})&nbsp;&nbsp;/&nbsp;&nbsp;{{q}})&nbsp;&nbsp;*&nbsp;&nbsp;({{dcdq}})$</p>
+  <p>=&nbsp;&nbsp;$({{c_final}}&nbsp;&nbsp;/&nbsp;&nbsp;{{q_final}})&nbsp;&nbsp;*&nbsp;&nbsp;({{dcdq}})$</p>
+  <p>=&nbsp;&nbsp;${{elasticity}}$</p>
+
+
+  <h5>Thus, Elasticity: ${{elasticity}}$</h5>
+{% endif %}
+</center>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
